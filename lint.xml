@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<lint>
+    <issue id="DefaultLocale" severity="ignore" />
+    <issue id="NewApi">
+        <ignore path="src/pl/wsiizs/chedule/fragment_scgedule.java" />
+    </issue>
+    <issue id="SelectableText" severity="ignore" />
+</lint>

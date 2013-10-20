@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/RelativeLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/gr_det_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/gr_det_form"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/gr_det_title"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="5dp" />
+
+    <TableLayout
+        android:id="@+id/TableLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/gr_det_form"
+        android:layout_marginTop="5dp" >
+
+        <TableRow
+            android:id="@+id/TableRow01"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="1dp" >
+
+            <TextView
+                android:layout_weight="2"
+                android:background="#ffc0c0c0"
+                android:gravity="center_horizontal"
+                android:paddingBottom="5dp"
+                android:paddingTop="5dp"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:layout_weight="1"
+                android:background="#fff0f0f0"
+                android:gravity="center_horizontal"
+                android:paddingBottom="5dp"
+                android:paddingTop="5dp"
+                android:text="@string/grade_gr"
+                android:textColor="@android:color/black" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/TableRow02"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="1dp" >
+
+            <TextView
+                android:layout_weight="2"
+                android:background="#ffcccccc"
+                android:gravity="center_horizontal"
+                android:paddingBottom="5dp"
+                android:paddingTop="5dp"
+                android:text="@string/grade_gr"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/gr_det_grade"
+                android:layout_weight="1"
+                android:background="@android:color/white"
+                android:gravity="center_horizontal"
+                android:textColor="@android:color/black" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/TableRow03"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="1dp" >
+
+            <TextView
+                android:layout_weight="2"
+                android:background="#ffc0c0c0"
+                android:gravity="center_horizontal"
+                android:paddingBottom="5dp"
+                android:paddingTop="5dp"
+                android:text="@string/grade_one"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/gr_det_one"
+                android:layout_weight="1"
+                android:background="#fff0f0f0"
+                android:gravity="center_horizontal"
+                android:paddingBottom="5dp"
+                android:paddingTop="5dp"
+                android:textColor="@android:color/black" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/TableRow04"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="1dp" >
+
+            <TextView
+                android:layout_weight="2"
+                android:background="#ffcccccc"
+                android:gravity="center_horizontal"
+                android:paddingBottom="5dp"
+                android:paddingTop="5dp"
+                android:text="@string/grade_two"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/gr_det_two"
+                android:layout_weight="1"
+                android:background="@android:color/white"
+                android:gravity="center_horizontal"
+                android:textColor="@android:color/black" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/TableRow05"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="1dp" >
+
+            <TextView
+                android:layout_weight="2"
+                android:background="#ffc0c0c0"
+                android:gravity="center_horizontal"
+                android:paddingBottom="5dp"
+                android:paddingTop="5dp"
+                android:text="@string/grade_war"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/gr_det_conditional"
+                android:layout_weight="1"
+                android:background="#fff0f0f0"
+                android:gravity="center_horizontal"
+                android:paddingBottom="5dp"
+                android:paddingTop="5dp"
+                android:textColor="@android:color/black" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/TableRow06"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="1dp" >
+
+            <TextView
+                android:layout_weight="2"
+                android:background="#ffcccccc"
+                android:gravity="center_horizontal"
+                android:paddingBottom="5dp"
+                android:paddingTop="5dp"
+                android:text="@string/grade_aw"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/gr_det_advance"
+                android:layout_weight="1"
+                android:background="@android:color/white"
+                android:gravity="center_horizontal"
+                android:textColor="@android:color/black" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/TableRow07"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="1dp" >
+
+            <TextView
+                android:layout_weight="2"
+                android:background="#ffc0c0c0"
+                android:gravity="center_horizontal"
+                android:paddingBottom="5dp"
+                android:paddingTop="5dp"
+                android:text="@string/grade_kom"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/gr_det_commission"
+                android:layout_weight="1"
+                android:background="#fff0f0f0"
+                android:gravity="center_horizontal"
+                android:paddingBottom="5dp"
+                android:paddingTop="5dp"
+                android:textColor="@android:color/black" />
+        </TableRow>
+    </TableLayout>
+
+</RelativeLayout>

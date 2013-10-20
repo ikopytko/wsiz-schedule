@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/RelativeLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/plan_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:visibility="invisible" />
+
+    <ImageView
+        android:id="@+id/plan_image1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="2dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="4dp"
+        android:contentDescription="@string/img"
+        android:src="@drawable/i" />
+
+    <TextView
+        android:id="@+id/plan_text1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/plan_image1"
+        android:layout_toRightOf="@+id/plan_image1"
+        android:fontFamily="sans-serif-condensed"
+        android:textSize="17sp" />
+
+    <TextView
+        android:id="@+id/plan_text2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/plan_text1"
+        android:layout_below="@+id/plan_text1"
+        android:fontFamily="sans-serif-light"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/plan_text3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/plan_text2"
+        android:fontFamily="sans-serif-light"
+        android:layout_below="@+id/plan_text2" />
+
+</RelativeLayout>

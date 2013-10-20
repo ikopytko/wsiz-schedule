@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="menu_settings">Налаштування</string>
+    <string name="location">Адреса</string>
+    <string name="cant_read_folder">Неможна відкрити папку!</string>
+    <string name="nnew">Новий</string>
+    <string name="select">Вибрати</string>
+    <string name="file_name">Файл:</string>
+    <string name="cancel">Закрити</string>
+    <string name="create">Зберегти</string>
+    <string name="no_cheese">Тут нічого немає</string>
+    <string name="help">Файл з розкладом можна скачати на Wirtualnej Uczelni в меню Student -> Wydruk podziału godzin -> Pobrać podział godzin w formacie CSV</string>
+    <string name="info">Пароль зберігається у зашифрованому виді</string>
+    
+    <!-- new -->
+    <string name="last_update">Час останнього оновлення:</string>
+    <string name="user_update_screen">Оновити вручну</string>
+    <string name="user_update">Виберіть файл</string>
+    <string name="user_update_save">Зберегти</string>
+    <string name="show_less">Всі уроки</string>
+    <string name="grade_averange">Середня</string>
+    <string name="settings_warning">Попередження</string>
+    <string name="settings_warning_message_1">Ви впевнені?</string>
+    <string name="settings_deleted">Видалено!</string>
+    <string name="settings_passw_new">Введіть новий пароль!</string>
+    <string name="settings_saved">Новий логін успішно збережений</string>
+    <string name="settings_wrong">Неправильний логін і пароль</string>
+    <string name="settings_wrong_login">Перевір логін</string>
+    <string name="settings_wrong_passw">Перевір пароль</string>
+    <string name="settings_error_internet">Перевір з\'єднання з інтернетом</string>
+    <string name="settings_error">Помилка! Попробуйте ще раз</string>
+    <string name="async_work">Працюю</string>
+    <string name="async_parse">Читаю файл</string>
+    <string name="parse_error">Помилка розмітки файлу!\nБудь ласка виберіть правильний файл</string>
+    <string name="settings_request">Відсилаю запит на сервер</string>
+    <string name="menu_login">Залогуйтеся будь ласка\nНалаштування - Змінити логін</string>
+    <string name="menu_updated">Успішно оновлено</string>
+    
+    <string name="semestr">Семестр</string>
+    
+    <string name="login_save_pass">запам\'ятати пароль</string>
+    <string name="login_go">Ввйіти</string>
+    <string name="login_dont_login">Оффлайн</string>
+    
+    <string name="menu_sch">Розклад</string>
+    <string name="menu_grades">Оцінки</string>
+    <string name="menu_plan">План навчання</string>
+    <string name="menu_group">Групи</string>
+    
+    <string name="choice_ch">Вибрати</string>
+    <string name="choice_back">Назад</string>
+    
+    <string name="grade_gr">Оцінка</string>
+    <string name="grade_one">1</string>
+    <string name="grade_two">2</string>
+    <string name="grade_war">Умовна</string>
+    <string name="grade_aw">Аванс</string>
+    <string name="grade_kom">Комісія</string>
+    
+    <string name="setting_lang">Мова</string>
+    <string name="setting_rest">Потрібен перезапуск</string>
+    <string name="setting_time">Час</string>
+    <string name="setting_show">Час заставки</string>
+    <string name="setting_sec">в секундах</string>
+    <string name="setting_usr">Налаштування користувача</string>
+    <string name="setting_delete_usr">Видалити логін і пароль</string>
+    <string name="setting_delete_db">Видалити базу даних</string>
+    <string name="setting_ch_ust">Змінити логін</string>
+    <string name="setting_login">Логін</string>
+    <string name="setting_pass">Пароль</string>
+    <string name="setting_save">Перевірити і зберегти</string>
+    
+    <string name="menu_ref">Оновити</string>
+    <string name="menu_more">Більше</string>
+    <string name="menu_sett">Налаштування</string>
+    <string name="menu_about">Про програму</string>
+    <string name="menu_exit">Вихід</string>
+    
+    <string name="app_aut">Автор:</string>
+
+    <string-array name="typ_select">
+        <item>Тиждень</item>
+        <item>Місяць</item>
+        <item>Семестр</item>
+    </string-array>
+    <string-array name="days">
+        <item>Понеділок</item>
+        <item>Вівторок</item>
+        <item>Середа</item>
+        <item>Четвер</item>
+        <item>П\'ятниця</item>
+        <item>Субота</item>
+        <item>Неділя</item>
+        <item>Сьогодні</item>
+        <item>Завтра</item>
+    </string-array>
+    <string-array name="mounth">
+        <item>Січень</item>
+        <item>Лютий </item>
+        <item>Березень</item>
+        <item>Квітень</item>
+        <item>Травень</item>
+        <item>Червень</item>
+        <item>Липень</item>
+        <item>Серпень</item>
+        <item>Вересень</item>
+        <item>Жовтень</item>
+        <item>Листопад</item>
+        <item>Грудень</item>
+    </string-array>
+    <string-array name="entries_lang">
+        <item>Українська</item>
+        <item>Русский</item>
+        <item>English</item>
+        <item>Polski</item>
+    </string-array>
+    <string-array name="entry_lang_values">
+        <item>ua</item>
+        <item>ru</item>
+        <item>en</item>
+        <item>pl</item>
+    </string-array>
+    <string-array name="splash_screen_time">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+    <string-array name="splash_screen_time_values">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+</resources>

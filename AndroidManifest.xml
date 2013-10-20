@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="pl.wsiz.schedule"
+    android:versionCode="4"
+    android:versionName="1.2" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="14" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/Theme.Example" ><!-- android:theme="@style/Theme.Sherlock.Light" -->
+        <activity
+            android:name="pl.wsiz.schedule.SplashScreen"
+            android:label="@string/app_name"
+            android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        
+        <activity
+            android:name="Page_login"
+            android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen" >
+        </activity>
+        
+        <activity
+            android:name="Page_choice"
+            android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen" >
+        </activity>
+        
+        <activity android:name="Page_menu" >
+        </activity>
+        
+        <activity android:name="pl.wsiz.schedule.FileDialog" >
+        </activity>
+        
+        <activity
+            android:name="Page_about"
+            android:label="About"
+            android:theme="@android:style/Theme.Light.NoTitleBar.Fullscreen" >
+        </activity>
+        
+        <activity
+            android:name="Page_settings"
+            android:label="Settings">
+        </activity>
+        
+        <activity android:name="Page_bus" android:label="WSIZoBus"></activity>
+        
+        <activity android:name="Page_schedule"></activity>
+        <activity android:name="Schedule_details"></activity>
+        <activity android:name="Page_grades"></activity>
+        <activity android:name="Grade_details"></activity>
+        <activity android:name="Page_plan"></activity>
+        <activity android:name="pl.wsiz.schedule.Page_groups"></activity>
+        <activity android:name="Page_less"></activity>
+    </application>
+
+</manifest>
