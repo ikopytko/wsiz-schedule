@@ -115,44 +115,7 @@ public class Page_menu extends SherlockActivity implements View.OnClickListener 
 	
 	 @Override
 	protected void onRestart() {
-	     super.onRestart();/*
-	     Cursor c1 = null;
-		 Cursor c2 = null;
-		 Cursor c3 = null;
-		 Cursor c4 = null;
-		 DBHelper dbHelper = new DBHelper(Page_menu.this, "wsiz_sch");
-		SQLiteDatabase db = dbHelper.getWritableDatabase();
-		try {
-			c1 = db.query("timetable", null, null, null, null, null, null);
-			c2 = db.query("grades", null, null, null, null, null, null);
-				c3 = db.query("academic_plan", null, null, null, null, null, null);
-			c4 = db.query("modules", null, null, null, null, null, null);
-			
-			//Editor ed = spf.edit();
-			
-			if (c1.getCount() != 0) {
-				btn_to_schedule.setEnabled(true);
-			}
-			if (c2.getCount() != 0) {
-				btn_to_grades.setEnabled(true);
-			}
-			if (c3.getCount() != 0) {
-				btn_to_plan.setEnabled(true);
-			}
-			if (c4.getCount() != 0) {
-				btn_to_groups.setEnabled(true);
-			}
-			c1.close();
-			c2.close();
-			c3.close();
-			c4.close();
-			
-			//ed.commit();
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-		dbHelper.close();
-		db.close();*/
+	     super.onRestart();
 	 }
 	
 	 @Override
@@ -176,7 +139,7 @@ public class Page_menu extends SherlockActivity implements View.OnClickListener 
 			{
 				haslo = spf.getString(Prefs.USER_PASSWORD, "");
 			    try {
-					haslo = Secure.decrypt("Sch_for_WSIiZ_stud", haslo);
+					haslo = Secure.decrypt("some_phrase", haslo);
 				} catch (Exception e) { e.printStackTrace(); }
 			    
 				if (!hasInternetConnection())// check internet
@@ -188,7 +151,7 @@ public class Page_menu extends SherlockActivity implements View.OnClickListener 
 				DBHelper dbHelper = new DBHelper(Page_menu.this, "wsiz_sch");
 				SQLiteDatabase db = dbHelper.getWritableDatabase();
 
-				// не видаляти таблиці, а видалити всі записи в таблиціх
+				// РЅРµ РІРёРґР°Р»СЏС‚Рё С‚Р°Р±Р»РёС†С–, Р° РІРёРґР°Р»РёС‚Рё РІСЃС– Р·Р°РїРёСЃРё РІ С‚Р°Р±Р»РёС†С–С…
 				try {
 					if (sp.getBoolean(Prefs.UPDATE_SCHEDULE, true)) {
 						//db.execSQL("DROP TABLE IF EXISTS " + "timetable");

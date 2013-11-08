@@ -6,11 +6,12 @@
         android:icon="@drawable/navigation_refresh"
         android:showAsAction="ifRoom"
         android:title="@string/menu_ref"/>
-    
+    <!-- 
     <item
         android:id="@+id/item_today"
         android:icon="@drawable/collections_go_to_today"
         android:showAsAction="ifRoom"
         android:title="@string/menu_ref"/>
+         -->
 
 </menu>

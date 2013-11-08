@@ -68,6 +68,12 @@
     <string name="setting_login">Login</string>
     <string name="setting_pass">Hasło</string>
     <string name="setting_save">Sprawdzić i zapisać</string>
+    <string name="setting_updset">Aktualizuj tylko&#8230;</string>
+    <string name="setting_updset_summary">Oszczędź Internet ruch</string>
+    <string name="setting_updset_sch">Aktualizuj harmonogram</string>
+    <string name="setting_updset_gra">Aktualizuj oceny</string>
+    <string name="setting_updset_pln">Aktualizuj plan studiów</string>
+    <string name="setting_updset_grp">Aktualizuj grupy</string>
     
     <string name="menu_ref">Aktualizuj</string>
     <string name="menu_more">więcej</string>

@@ -69,6 +69,12 @@
     <string name="setting_login">Логін</string>
     <string name="setting_pass">Пароль</string>
     <string name="setting_save">Перевірити і зберегти</string>
+    <string name="setting_updset">Оновлювати тільки&#8230;</string>
+    <string name="setting_updset_summary">Зберігає трафік</string>
+    <string name="setting_updset_sch">Оновлювати розклад</string>
+    <string name="setting_updset_gra">Оновлювати оцінки</string>
+    <string name="setting_updset_pln">Оновлювати академічний план</string>
+    <string name="setting_updset_grp">Оновлювати групи</string>
     
     <string name="menu_ref">Оновити</string>
     <string name="menu_more">Більше</string>

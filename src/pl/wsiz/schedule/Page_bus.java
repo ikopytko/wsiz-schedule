@@ -2,9 +2,12 @@ package pl.wsiz.schedule;
 
 import java.io.BufferedInputStream;
 import java.io.BufferedOutputStream;
+import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
-import java.net.MalformedURLException;
+import java.io.InputStreamReader;
+import java.net.URI;
+import java.net.URISyntaxException;
 import java.net.URL;
 import java.net.URLConnection;
 
@@ -13,6 +16,13 @@ import jxl.Sheet;
 import jxl.Workbook;
 import jxl.read.biff.BiffException;
 
+import org.apache.http.HttpEntity;
+import org.apache.http.HttpResponse;
+import org.apache.http.StatusLine;
+import org.apache.http.client.ClientProtocolException;
+import org.apache.http.client.HttpClient;
+import org.apache.http.client.methods.HttpGet;
+import org.apache.http.impl.client.DefaultHttpClient;
 import org.apache.http.util.ByteArrayBuffer;
 
 import android.app.AlertDialog;
@@ -152,11 +162,11 @@ public class Page_bus extends SherlockFragmentActivity implements ActionBar.TabL
         @Override
         protected String doInBackground(Void... params) {
           try {
-        	  sheet = downloadSheet(new URL("http://master.tak-ye.com/sheet.wsb"));
-		} catch (MalformedURLException e) {
+        	  sheet = downloadSheet(new URI("http://locator.byethost7.com/sheet.wsb")); // http://master.tak-ye.com/sheet.wsb
+		}  catch (URISyntaxException e) {
 			e.printStackTrace();
 		}
-          Log.i("BUSTAG", "Im return " + sheet);
+          Log.i("BUSTAG", "Im return " + sheet + " from locator.byethost7.com/sheet.wsb");
           return sheet;
         }
         
@@ -177,14 +187,14 @@ public class Page_bus extends SherlockFragmentActivity implements ActionBar.TabL
 					Log.i("BUSTAG", sheet);
 					finish();
 				} else {
-					data = sheet.split("\\r?\\n");
+					data = sheet.split(";");
 					urls = new String[data.length];
 				
 					for (int i = 0; i < data.length; i++) {
 						// copy file address
-						urls[i] = data[i].substring(1);
-						// assign name of month to sting instead number
-						data[i] = getResources().getStringArray(R.array.mounth)[data[i].charAt(0)-49];
+						urls[i] = data[i].substring(2);
+						// assign name of month to sting instead number  XX201310281447
+						data[i] = getResources().getStringArray(R.array.mounth)[Integer.parseInt(data[i].substring(0, 2))]; // Integer.parseInt(data[i].substring(0, 2))
 					}
 					// Show available files
 					adb = new AlertDialog.Builder(Page_bus.this);
@@ -202,26 +212,36 @@ public class Page_bus extends SherlockFragmentActivity implements ActionBar.TabL
         	}
         }
         
-        public String downloadSheet(URL url) {
-			InputStream in = null;
-			String finalString = "";
+        public String downloadSheet(URI url) {
+        	StringBuilder builder = new StringBuilder();
+			HttpClient client = new DefaultHttpClient();
+			HttpGet httpGet = new HttpGet(url);
 			
 			try {
-				byte[] buffer = new byte[26];
-				URLConnection urlConnection = url.openConnection();
-				in = new BufferedInputStream(urlConnection.getInputStream());
-
-				while (in.available() > 0) {
-					in.read(buffer);
+				HttpResponse response = client.execute(httpGet);
+				StatusLine statusLine = response.getStatusLine();
+				int statusCode = statusLine.getStatusCode();
+				if (statusCode == 200) {
+					HttpEntity entity = response.getEntity();
+					InputStream content = entity.getContent();
+					BufferedReader reader = new BufferedReader(
+							new InputStreamReader(content));
+					
+					String line;
+					
+					while ((line = reader.readLine()) != null)
+						builder.append(line);
+				} else {
+					Log.e("TAG", "Failed to download file");
 				}
-				finalString = new String(buffer, "UTF8");
+				
+				
+			} catch (ClientProtocolException e) {
+				e.printStackTrace();
 			} catch (IOException e) {
-			} finally {
-				try {
-					in.close();
-				} catch (IOException e) {}
+				e.printStackTrace();
 			}
-            return finalString;
+			return builder.toString();
         }
       }
     
@@ -234,7 +254,6 @@ public class Page_bus extends SherlockFragmentActivity implements ActionBar.TabL
 
        @Override
        protected Void doInBackground(Void... params) {
-    	   Log.i("TAG", urls[0]);
     	   String withoutNulls = urls[0].trim();
     	   Log.i("TAG", withoutNulls);
     	   DownloadFile("https://wu.wsiz.rzeszow.pl/wunet/pliki/Kielnarowa/" + withoutNulls + ".xls","Sample.xls");
@@ -300,7 +319,6 @@ public class Page_bus extends SherlockFragmentActivity implements ActionBar.TabL
                         	   content = content.split(":")[0] + ":" + content.split(":")[1];
                            } catch (ArrayIndexOutOfBoundsException e) {}
                            cv.put(td_name[j], content);
-                           Log.i("BUSTAG", "content: " + content);
                        }
                 	   // write store to DB
                 	   db.insert("timetable", null, cv);
@@ -384,9 +402,6 @@ public class Page_bus extends SherlockFragmentActivity implements ActionBar.TabL
 		case R.id.item_update:
 			pd = ProgressDialog.show(Page_bus.this,null, "Please Wait ...", true);
 			update();
-			break;
-		case R.id.item_today:
-			Toast.makeText(this, "Today", Toast.LENGTH_LONG).show();
 			break;
 		case R.id.item4:
 			moveTaskToBack(true);

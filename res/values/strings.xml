@@ -78,7 +78,7 @@
     <string name="setting_sec">in seconds</string>
     <string name="setting_usr">User settings</string>
     <string name="setting_delete_usr">Delete login and password</string>
-    <string name="setting_delete_db">Droup Data Base</string>
+    <string name="setting_delete_db">Drop Data Base</string>
     <string name="setting_ch_ust">Change login</string>
     <string name="setting_login">Login</string>
     <string name="setting_pass">Password</string>
@@ -119,7 +119,7 @@
     </string-array>
     <string-array name="mounth">
         <item>January</item>
-        <item>February </item>
+        <item>February</item>
         <item>March</item>
         <item>April</item>
         <item>May</item>

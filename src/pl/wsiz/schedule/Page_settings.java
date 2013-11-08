@@ -281,7 +281,7 @@ public class Page_settings extends SherlockPreferenceActivity {
 				Editor ed = spf.edit();
 				String crypto = "Error";
 				try {
-					crypto = Secure.encrypt("Sch_for_WSIiZ_stud", findPreference("edit_password").getSummary().toString());
+					crypto = Secure.encrypt("some_phrase", findPreference("edit_password").getSummary().toString());
 				} catch (Exception e) { e.printStackTrace(); }
 
 				ed.putString(Prefs.USER_LOGIN, findPreference("edit_login").getSummary().toString());

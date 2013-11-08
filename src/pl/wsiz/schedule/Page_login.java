@@ -122,11 +122,11 @@ public class Page_login extends Activity implements OnClickListener {
 			pd = new ProgressDialog(Page_login.this);
 		      pd.setTitle(getResources().getString(R.string.async_work));
 		      pd.setMessage(getResources().getString(R.string.settings_request));
-		      // меняем стиль на индикатор
+		      // РјРµРЅСЏРµРј СЃС‚РёР»СЊ РЅР° РёРЅРґРёРєР°С‚РѕСЂ
 		      pd.setProgressStyle(ProgressDialog.STYLE_HORIZONTAL);
-		      // устанавливаем максимум
+		      // СѓСЃС‚Р°РЅР°РІР»РёРІР°РµРј РјР°РєСЃРёРјСѓРј
 		      pd.setMax(100);
-		      // включаем анимацию ожидания
+		      // РІРєР»СЋС‡Р°РµРј Р°РЅРёРјР°С†РёСЋ РѕР¶РёРґР°РЅРёСЏ
 		      pd.setIndeterminate(true);
 		      pd.show();
 			// start AsyncTask
@@ -191,20 +191,6 @@ public class Page_login extends Activity implements OnClickListener {
 			httpContext = new BasicHttpContext();
 			httpContext.setAttribute(ClientContext.COOKIE_STORE, cookieStore);
 			super.onPreExecute();
-
-			// Show dialog
-			/*pd = new ProgressDialog(Page_login.this);
-		      pd.setTitle(getResources().getString(R.string.async_work));
-		      pd.setMessage(getResources().getString(R.string.settings_request));
-		      // меняем стиль на индикатор
-		      pd.setProgressStyle(ProgressDialog.STYLE_HORIZONTAL);
-		      // устанавливаем максимум
-		      pd.setMax(100);
-		      // включаем анимацию ожидания
-		      pd.setIndeterminate(true);
-		      pd.show();*/
-		      
-			//pd = ProgressDialog.show(Page_login.this, "Working...", "request to server", true, false);
 		}
 
 		@Override
@@ -219,7 +205,7 @@ public class Page_login extends Activity implements OnClickListener {
 					Editor ed = spf.edit();
 				    String crypto = "Error";
 					try {
-						crypto = Secure.encrypt("Sch_for_WSIiZ_stud", haslo);
+						crypto = Secure.encrypt("some_phrase", haslo);
 					} catch (Exception e) { e.printStackTrace(); }
 
 					ed.putString(Prefs.USER_LOGIN, login);
